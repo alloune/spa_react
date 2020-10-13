@@ -266,7 +266,6 @@ Votre state devrait ressembler à ça :
 const [suppliers, setSuppliers] = React.useState([]);
 const [loading, setLoading] = React.useState(false);
 const [error, setError] = React.useState(null);
-}
 ```
 
 Avant d'aller plus loin, il faut choisir quand lancer la requête, la solution communément admise est de dire : "Quand le composant est créé, lance la requête".
