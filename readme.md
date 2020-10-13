@@ -29,7 +29,7 @@ Dans un premier temps, nous voulons changer l'écran d'accueil, ce dernier vous 
 
 Faites les modifications nécessaires.
 
-- Ajoutez dans votre composant App deux méthodes : `onSuppliersListClick` et `onMapClick` qui devront faire des [alertes](https://developer.mozilla.org/fr/docs/Web/API/Window/alert) pour marquer le fait qu'un utilisateur a cliqué dessus.
+- Ajoutez dans votre composant App deux fonctions : `onSuppliersListClick` et `onMapClick` qui devront faire des [alertes](https://developer.mozilla.org/fr/docs/Web/API/Window/alert) pour marquer le fait qu'un utilisateur a cliqué dessus.
 
 ### 3) Préparation des écrans.
 
@@ -38,6 +38,10 @@ Nous voulons préparer les écrans de la liste des fournisseurs ainsi que celui 
 - Créez donc deux fichiers `SuppliersList.js` et `SuppliersMap.js`. Les templates de ces composants seront très simples dans un premier temps, par exemple un simple titre h1 contenant 'Liste des fournisseurs' ou 'Carte des fournisseurs' est suffisant.
 
 - Faites en sorte d'ajouter ces deux composants React au template de votre app.
+
+- Faites en sorte d'afficher seulement un composant à la fois (affichage conditionnel). Attention en React il n'y a pas de `v-if`. Pour réaliser cette fonctionnalité, vous aurez besoin d'utiliser les [hooks](https://fr.reactjs.org/docs/hooks-intro.html) concept clefs en React. 
+    - utilisez `useState()` pour créer un boolean `toggleDisplay`. 
+    - cabler les boutons pour passer d'un état à l'autre
 
 :arrow_right:**Commiter dans git avec un message explicite, par exemple "fin étape 3" ou même "Ajout composants SuppliersList et SuppliersMap"**
 
