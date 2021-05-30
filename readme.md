@@ -9,7 +9,72 @@ Vous êtes le gérant d'un site ecommerce, ce site vend un produit unique : de l
 
 ![](images/preview.gif)
 
+
+## 0) ⚠️ Modalités de rendu ⚠️
+
+Votre avancement devra être présenté dans des commits, sous la forme d'une Pull Request minimum par exercice, avec un message reprenant l'intitulé de l'exercice. 
+
+*Dans vos Pull request, vous pouvez utiliser [le format Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet): donnez du détail sur votre ajout, mettez des screenshots ...*
+
+### Comment s'organiser ?
+
+Vous travaillerez sur une branche par fonctionnalité, en respectant le [Workflow de branche par fonctionnalité](https://www.smartwavesa.com/blog-articles/git-quelle-strategie-de-branching/). 
+- Tous les commits doivent être faits sur une branche dédiée à la fonctionnalité, par ex. `create-grid`, `handle-placement-errors`, `attack-animations`, `ships-images` ...
+- Une fois poussés, les commits doivent être présentés dans une Pull Request.
+- Chaque Pull Request doit être lue et validée, puis mergée par un **autre membre** de votre ilôt.
+
+### Pense bête :
+
+À chaque début de fonctionnalité, il faudra donc :
+- Récupérer les modifications depuis `master` distant 
+- Ouvrir un nouvelle branche depuis `master` local 
+- Travailler sur cette branche, committer.
+
+À chaque fin de fonctionnalité : 
+- Récupérer les modifications depuis `master` distant 
+- Pousser votre branche 
+- Ouvrir une Pull Request vers `master` ( en restant bien sur votre repo Git )
+- Informer votre îlot que vous avez besoin de leur relecture !
+
+### Mettre en place son repo Git 
+- [ ] Forkez ce repo, et clonez votre fork
+- [ ] Créez une branche `mise-en-place-git` depuis `master`.
+- [ ] [Commitez la complétion](https://user-images.githubusercontent.com/632197/42737442-a94e7534-8873-11e8-82fa-75d178493074.png) des 3 étapes de cet exercice sur `mise-en-place-git`, puis ouvrez une Pull Request vers `master` sur votre repo.
+
+_Pour cela, dans un git bash :_
+
+```bash
+git clone <URL_DE_VOTRE_FORK>
+# Choisir url https, ou ssh si vous avez un clé ssh configurée sur votre machine
+cd <NOM_DU_DOSSIER>
+
+# ajouter mon repo comme remote supplémentaire
+git remote add campus git@github.com:le-campus-numerique/JS_vue-battleship.git
+# ou https://github.com/le-campus-numerique/JS_vue-battleship.git en HTTPS
+
+# pour vérifier mes remotes
+git remote -v
+
+# pour récupérer les modifications depuis chez le campus
+git pull campus main
+```
+
+_Pour voir en local ce que les collègues ont fait, on peut les ajouter aussi comme remote supplémentaires_
+
+```bash
+# ajouter collègue comme remote supplémenaire
+git remote add collegue git@github.com:collegue/JS_vue-battleship.git
+
+# télécharger les modification du projet du collègue
+git fetch collegue
+
+# pour voir le contenu de sa branche super-feature
+git branch super-feature collegue/super-feature
+```
+
 ### 1) Initialiser une application React.
+
+_Nouvel exercice, donc nouvelle branche en local._
 
 - Commençons par créer une application React.js, pour cela utilisons l'interface en ligne de commande officielle `create-react-app`.
 
