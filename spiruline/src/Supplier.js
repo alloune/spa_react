@@ -7,7 +7,7 @@ function Supplier(props) {
      const formatedDate =  Moment(props.checkedAt).format('DD-MM-YYYY');
     return(
         <div>
-            <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+            <div className="p-6 max-w-sm my-10 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
                 <div className="shrink-0">
                     <img className="h-12 w-12" src={ Toto } alt="ChitChat Logo"/>
                 </div>
