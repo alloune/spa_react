@@ -1,4 +1,3 @@
-import './App.css';
 import SuppliersList from "./SuppliersList";
 import SuppliersMap from "./SuppliersMap";
 import {
