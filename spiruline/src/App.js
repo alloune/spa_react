@@ -13,9 +13,10 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/suppliers" element={<SuppliersList/>} />
-                <Route path="/map" element={<SuppliersMap/>} />
+                <Route path = "/supplier" element = {<Home/>} />
+                <Route path = "/" element = {<Home/>} />
+                <Route path = "/suppliers" element = {<SuppliersList/>} />
+                <Route path = "/map" element = {<SuppliersMap/>} />
             </Routes>
         </BrowserRouter>
     );
