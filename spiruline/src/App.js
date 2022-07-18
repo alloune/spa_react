@@ -5,21 +5,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav>
+          <ul>
+            <li><button onClick={onSuppliersListClick}>Suppliers</button></li>
+            <li><button onClick={onMapClick}>Map</button></li>
+          </ul>
+        </nav>
       </header>
     </div>
   );
+}
+
+function onSuppliersListClick(){
+  alert('Cliqué sur la liste des fournisseur')
+}
+
+function onMapClick(){
+  alert('Cliqué sur la map')
 }
 
 export default App;
