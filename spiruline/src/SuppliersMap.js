@@ -1,6 +1,12 @@
+import Nav from "./Nav";
+
 function SuppliersMap(){
     return (
-        <h1> La carte </h1>
+        <div>
+            <Nav/>
+            <h1> La carte </h1>
+        </div>
+
     );
 }
 

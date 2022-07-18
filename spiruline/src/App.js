@@ -1,41 +1,31 @@
 import './App.css';
 import SuppliersList from "./SuppliersList";
 import SuppliersMap from "./SuppliersMap";
-import { useState } from "react";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Home from "./Home";
 
-function App() {
-
-    const [toggleDisplay, setToggleDisplay] = useState(true)
-
-    function onSuppliersListClick() {
-        setToggleDisplay(true);
-    }
-
-    function onMapClick() {
-        setToggleDisplay(false);
-    }
+export default function App() {
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <nav>
-                    <ul>
-                        <li>
-                            <button onClick={onSuppliersListClick}>Suppliers</button>
-                        </li>
-                        <li>
-                            <button onClick={onMapClick}>Map</button>
-                        </li>
-                    </ul>
-                </nav>
-                <div>
-                    { toggleDisplay ? <SuppliersList/> : <SuppliersMap/> }
-                </div>
-            </header>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/suppliers" element={<SuppliersList/>} />
+                <Route path="/map" element={<SuppliersMap/>} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
+function onSuppliersListClick() {
 
+}
 
-export default App;
+function onMapClick() {
+
+}
+
