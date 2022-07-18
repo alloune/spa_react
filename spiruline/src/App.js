@@ -1,27 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import SuppliersList from "./SuppliersList";
+import SuppliersMap from "./SuppliersMap";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <nav>
-          <ul>
-            <li><button onClick={onSuppliersListClick}>Suppliers</button></li>
-            <li><button onClick={onMapClick}>Map</button></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  );
+
+    const [toggleDisplay, setToggleDisplay] = useState(true)
+
+    function onSuppliersListClick() {
+        setToggleDisplay(true);
+    }
+
+    function onMapClick() {
+        setToggleDisplay(false);
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <nav>
+                    <ul>
+                        <li>
+                            <button onClick={onSuppliersListClick}>Suppliers</button>
+                        </li>
+                        <li>
+                            <button onClick={onMapClick}>Map</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    { toggleDisplay ? <SuppliersList/> : <SuppliersMap/> }
+                </div>
+            </header>
+        </div>
+    );
 }
 
-function onSuppliersListClick(){
-  alert('Cliqué sur la liste des fournisseur')
-}
 
-function onMapClick(){
-  alert('Cliqué sur la map')
-}
 
 export default App;
