@@ -45,7 +45,6 @@ function SuppliersList() {
             </div>
         </div>
     )
-
 }
 
 
