@@ -1,11 +1,13 @@
 import SuppliersList from "./SuppliersList";
 import SuppliersMap from "./SuppliersMap";
+import Home from "./Home";
+import Edit from "./Edit";
 import {
     BrowserRouter,
     Routes,
     Route,
 } from "react-router-dom";
-import Home from "./Home";
+
 
 export default function App() {
 
@@ -13,6 +15,7 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path = "/supplier" element = {<Home/>} />
+                <Route path = "/supplier/edit/:supplierId" element={<Edit/>}/>
                 <Route path = "/" element = {<Home/>} />
                 <Route path = "/suppliers" element = {<SuppliersList/>} />
                 <Route path = "/map" element = {<SuppliersMap/>} />
