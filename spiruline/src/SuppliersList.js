@@ -5,6 +5,7 @@ import axios from 'axios';
 import ErrorsHandler from "./ErrorsHandler";
 import Loading from "./Loading";
 
+
 function SuppliersList() {
     const [suppliers, setSuppliers] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -24,8 +25,8 @@ function SuppliersList() {
     return (
         <div>
             <Nav/>
-            <h1>Liste des fournisseurs</h1>
-            <div className={'flex flex-wrap gap-x-10'}>
+            <h1 className="text-center text-5xl font-bold mt-20 mb-6">Liste des fournisseurs</h1>
+            <div className={'ml-40 mr-40 flex flex-wrap gap-20'}>
                 {
                     loading ? <Loading/>
                         :
