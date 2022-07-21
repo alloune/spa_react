@@ -1,9 +1,9 @@
-import Nav from "./Nav";
-import Supplier from "./Supplier";
+import Nav from "../components/Nav";
+import Supplier from "../components/Supplier";
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import ErrorsHandler from "./ErrorsHandler";
-import Loading from "./Loading";
+import ErrorsHandler from "../components/ErrorsHandler";
+import Loading from "../components/Loading";
 
 
 function SuppliersList() {

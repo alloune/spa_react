@@ -1,7 +1,7 @@
-import SuppliersList from "./SuppliersList";
-import SuppliersMap from "./SuppliersMap";
-import Home from "./Home";
-import Edit from "./Edit";
+import SuppliersList from "./views/SuppliersList";
+import SuppliersMap from "./views/SuppliersMap";
+import Home from "./views/Home";
+import Edit from "./views/Edit";
 import {
     BrowserRouter,
     Routes,

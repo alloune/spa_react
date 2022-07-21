@@ -1,9 +1,9 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import Nav from "./Nav";
-import Loading from "./Loading";
-import EditForm from "./EditForm";
+import Nav from "../components/Nav";
+import Loading from "../components/Loading";
+import EditForm from "../components/EditForm";
 
 export default function Edit() {
     let {supplierId} = useParams();

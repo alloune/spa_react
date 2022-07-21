@@ -1,4 +1,4 @@
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet'
 import React, {useState, useEffect} from 'react';
 
@@ -27,7 +27,7 @@ function SuppliersMap() {
         <div>
             <Nav/>
             <h1 className="text-center text-5xl font-bold mt-20 mb-6"> La carte </h1>
-            <MapContainer center={[51.505, -0.09]} zoom={12} scrollWheelZoom={false}>
+            <MapContainer center={[51.505, -0.09]} zoom={12} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

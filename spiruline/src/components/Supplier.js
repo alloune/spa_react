@@ -1,5 +1,5 @@
 import Moment from 'moment';
-import Toto from './leaf.png'
+import Toto from '../img/leaf.png'
 
 
 function Supplier(props) {

@@ -1,4 +1,4 @@
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import {useEffect, useState} from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
