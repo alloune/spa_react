@@ -26,8 +26,6 @@ export default function Edit() {
 
     return (
         <>
-            {console.log(supplier)}
-            <Nav/>
             {
                 supplier.id ? <EditForm
                         supplierId={supplierId}

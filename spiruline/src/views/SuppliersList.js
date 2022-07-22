@@ -24,7 +24,6 @@ function SuppliersList() {
 
     return (
         <div>
-            <Nav/>
             <h1 className="text-center text-5xl font-bold mt-20 mb-6">Liste des fournisseurs</h1>
             <div className={'ml-40 mr-40 flex flex-wrap gap-20'}>
                 {

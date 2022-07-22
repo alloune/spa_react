@@ -1,27 +1,31 @@
-import { useRef } from "react";
+import {useRef} from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Nav from "./Nav";
 
 export default function CreateForm(props) {
 
     let createSupplierDate = new Date;
+    let navigate = useNavigate();
     const inputSupplier = useRef(null);
     const inputStatus = useRef(null);
     const inputLatitude = useRef(null);
     const inputLongitude = useRef(null);
 
-    function editSupplier() {
-        axios.put(`https://heroku-campus-suppliers.herokuapp.com/api/suppliers/` + props.supplierId,
+    function createSupplier() {
+        axios.post(`https://heroku-campus-suppliers.herokuapp.com/api/suppliers`,
             {
                 name: inputSupplier.current.value,
                 latitude: inputLatitude.current.value,
                 longitude: inputLongitude.current.value,
                 status: inputStatus.current.value,
-                createdAt: createSupplierDate,
+                checkedAt: createSupplierDate
             }
-        )
-        alert("Le fournisseur "+ props.supplierId + " à bien été modifié.")
+        ).then(navigate('/', { replace : true }))
     }
-        return (
+
+    return (
+        <>
             <div className="w-full max-w-lg ">
                 <div className="flex flex-wrap -mx-3 mb-6 j ">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
@@ -77,9 +81,10 @@ export default function CreateForm(props) {
                 <button
                     className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
                  hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                    onClick={ editSupplier }>
-                    Modifier
+                    onClick={createSupplier}>
+                    Créer
                 </button>
             </div>
-        )
+        </>
+    )
 }

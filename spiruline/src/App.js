@@ -7,15 +7,19 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+import CreateForm from "./components/CreateForm";
+import Nav from "./components/Nav";
 
 
 export default function App() {
 
     return (
         <BrowserRouter>
+            <Nav/>
             <Routes>
                 <Route path = "/supplier" element = {<Home/>} />
-                <Route path = "/supplier/edit/:supplierId" element={<Edit/>}/>
+                <Route path = "/supplier/edit/:supplierId" element={<Edit/>} />
+                <Route path = "/supplier/create" element={<CreateForm/>} />
                 <Route path = "/" element = {<Home/>} />
                 <Route path = "/suppliers" element = {<SuppliersList/>} />
                 <Route path = "/map" element = {<SuppliersMap/>} />

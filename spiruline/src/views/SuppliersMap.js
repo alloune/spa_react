@@ -25,7 +25,6 @@ function SuppliersMap() {
     return (
 
         <div>
-            <Nav/>
             <h1 className="text-center text-5xl font-bold mt-20 mb-6"> La carte </h1>
             <MapContainer center={[51.505, -0.09]} zoom={12} scrollWheelZoom={true}>
                 <TileLayer
@@ -34,7 +33,6 @@ function SuppliersMap() {
                 />
                 {
                     suppliers.map(element => (
-
                         <Marker position={[element.latitude, element.longitude]}>
                             <Popup>
                                 A pretty CSS3 popup. <br/> Easily customizable.
@@ -43,7 +41,6 @@ function SuppliersMap() {
                     )
                 })
                 }
-
             </MapContainer>
         </div>
     );
